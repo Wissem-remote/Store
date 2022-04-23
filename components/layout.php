@@ -1,12 +1,10 @@
 <?php
-function nav(string $lien, string $title):string
-{
-    $class = "nav-link";
-    if($_SERVER['SCRIPT_NAME'] === $lien){
-        $class .= " active";
-    }
-    return "<a class='".$class."' href='".$lien."'>".$title."</a>";
-}
+require './vendor/autoload.php';
+
+use App\Nav;
+
+$lien= new Nav;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,10 +27,10 @@ function nav(string $lien, string $title):string
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
             <div class="navbar-nav ms-auto">
-            '. nav('/','ACCEUIL') .'
-            '. nav('/store','BOUTIQUE') .'
-            '. nav('/nos-accesoiries','ACCESSOIRIES') .'
-            '. nav('/nous-contact','CONTACT') .'
+            '. $lien->link('/','ACCEUIL') .'
+            '. $lien->link('/store','BOUTIQUE') .'
+            '. $lien->link('/nos-accesoiries','ACCESSOIRIES') .'
+            '. $lien->link('/nous-contact','CONTACT') .'
             
             </div>
             </div>

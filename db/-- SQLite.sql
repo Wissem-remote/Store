@@ -23,4 +23,21 @@
 
 --  DROP TABLE admin
 
-INSERT INTO admin (user,password) VALUES ('admin','secret')
+--INSERT INTO admin (user,password) VALUES ('admin','secret')
+
+
+--ALTER TABLE article ADD COLUMN type VARCHAR(150) ; 
+
+--ALTER TABLE article ADD COLUMN promo INTEGER ; 
+
+--UPDATE article SET type = 'Article' WHERE id = 1;
+
+
+--ALTER TABLE article DROP COLUMN type; 
+
+--ALTER TABLE article ADD COLUMN category VARCHAR(150) ;
+
+
+--UPDATE article SET category = 'Article' WHERE id = 1;
+
+DELETE FROM article WHERE id = 4
