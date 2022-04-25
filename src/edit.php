@@ -15,6 +15,6 @@ class Edit{
             'promo' => $post['promo'],
             'cat' => $post['type'],
         ]);
-        header('location: /admin/connect');
+        header('location: /admin/connect-1');
     }
 }

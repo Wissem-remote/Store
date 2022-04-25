@@ -16,6 +16,7 @@ $check = new Img;
 $take = new Edit;
 $error = false;
 
+$pagetitle= "Editions";
 if(!empty($_FILES['img'])){
     $op = $check->Pic($_FILES);
     $pic = $op[0];
@@ -29,7 +30,7 @@ if(!empty($_POST)){
 }
 //lien navigation
 $home = $lien->link('/admin/connect','Home');
-$article = $lien->link('/admin/add','Ajouter Des Articles');
+$article = $lien->link('/admin/add','Ajouter Des Articles/Accessoires');
 
 //bare de navigation
 $nav = <<<HTML
@@ -61,7 +62,7 @@ HTML;
 ?>
 
 <div class="container mt-4 p-3">
-<h2 class="mb-4"> Ajouter votre article</h2>
+<h2 class="mb-4"> Ajouter votre article ou accessoires</h2>
     <div class="col-8 m-auto">
     <form class="form-group" action="" method="POST" enctype="multipart/form-data" >
         <?php if($error): ?>
@@ -108,7 +109,7 @@ HTML;
             <label class="form-label">Type Article :</label>
             <select class="form-select" name="type" aria-label="Default select example">
                 <option selected value="article">Article</option>
-                <option value="Accessoiries">Accessoiries</option>
+                <option value="accessoiries">Accessoiries</option>
             </select>
             </div>
         

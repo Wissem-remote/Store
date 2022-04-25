@@ -40,4 +40,9 @@
 
 --UPDATE article SET category = 'Article' WHERE id = 1;
 
-DELETE FROM article WHERE id = 4
+--DELETE FROM article WHERE id = 4
+
+
+--SELECT * FROM article WHERE category = 'article'
+
+UPDATE article SET category = 'article' WHERE id = 6
